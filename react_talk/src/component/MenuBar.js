@@ -22,23 +22,23 @@ function MenuBar() {
       </ScreenBtn>
       <ClickMenu>
         <ClickUpMenu>
-          <MenuIcon>
+          <MenuIconUp>
             <IoMdPerson />
-          </MenuIcon>
-          <MenuIcon>
+          </MenuIconUp>
+          <MenuIconUp>
             <ImBubble />
-          </MenuIcon>
-          <MenuIcon>
+          </MenuIconUp>
+          <MenuIconUp>
             <FiMoreHorizontal />
-          </MenuIcon>
+          </MenuIconUp>
         </ClickUpMenu>
         <ClickDownMenu>
-          <MenuIcon>
+          <MenuIconDown>
             <BsFillBellSlashFill />
-          </MenuIcon>
-          <MenuIcon>
+          </MenuIconDown>
+          <MenuIconDown>
             <FiSettings />
-          </MenuIcon>
+          </MenuIconDown>
         </ClickDownMenu>
       </ClickMenu>
     </FixMenu>
@@ -69,12 +69,14 @@ const ClickMenu = styled.div`
   height: 100%;
 `;
 
-const ClickUpMenu = styled.div``;
+const ClickUpMenu = styled.div`
+  margin-top: 30px;
+`;
 
 const ClickDownMenu = styled.div``;
 
 const StateIcon1 = styled.button`
-  font-size: 15px;
+  font-size: 10px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -89,7 +91,7 @@ const StateIcon1 = styled.button`
   margin-left: 10px;
 `;
 const StateIcon2 = styled.button`
-  font-size: 15px;
+  font-size: 30px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -118,7 +120,17 @@ const StateIcon3 = styled.button`
   margin-right: 10px;
 `;
 
-const MenuIcon = styled.div`
+const MenuIconUp = styled.div`
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  :first-child {
+    font-size: 40px;
+  }
+`;
+
+const MenuIconDown = styled.div`
   font-size: 30px;
   display: flex;
   justify-content: center;
