@@ -5,12 +5,16 @@ import ToolBar from "./pages/ToolBar";
 import MenuBar from "./component/MenuBar";
 import Header from "./component/Header";
 import styled from "styled-components";
+import Login from "./pages/Login";
+import { ConnectedRouter } from "connected-react-router";
+import { history } from "./redux/configureStore";
 
 function App() {
   return (
-    <BrowserRouter>
+    <ConnectedRouter history={history}>
       <MainScreen>
         <MenuBar></MenuBar>
+
         <div>
           <Header />
           <Switch>
@@ -26,7 +30,7 @@ function App() {
           </Switch>
         </div>
       </MainScreen>
-    </BrowserRouter>
+    </ConnectedRouter>
   );
 }
 
